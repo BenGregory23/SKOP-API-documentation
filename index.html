@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>API Documentation</title>
+  <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -12,16 +12,19 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      loadSidebar: true,
-      subMaxLevel: 3,
       name: 'Skop API ',
       repo: 'https://github.com/BenGregory23/SKOP-API',
+
+
+      //sidebar
+      loadSidebar: true,
+      subMaxLevel: 3,
 
 
       // Search plugin options
       search: 'auto', // default
       search : [
-        '/',            // => /gettingStarted.md
+        '/',            // => /README.md
       ],
 
       // complete configuration parameters
@@ -29,12 +32,15 @@
         maxAge: 86400000, // Expiration time, the default one day
         paths: [], // or 'auto'
         placeholder: 'Type to search',
+        noResult: 'No result',
 
         // Localization
         placeholder: {
           '/': 'Type to search'
         },
       },
+
+      depth: 2,
     }
   </script>
   <!-- Docsify v4 -->
