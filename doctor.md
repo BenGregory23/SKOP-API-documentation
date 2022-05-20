@@ -62,7 +62,7 @@ doctor.skop();
 
 > **Note** : It is the same method used to listen to a zone but without any parameter.
 
-##### `changeGainLevel(gain)` 
+##### `setGain(gain)` 
 ***
 
 This method changes the gain level of the modified audio coming from the patient.
