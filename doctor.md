@@ -71,7 +71,7 @@ If the value is positive, the audio will be amplified, if it is negative, the au
 
 ```javascript
 //Here we are changing the gain level of the audio to 10
-doctor.changeGainLevel(10);
+doctor.setGain(10);
 
 ```
 
