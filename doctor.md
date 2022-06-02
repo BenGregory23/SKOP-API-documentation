@@ -76,6 +76,19 @@ doctor.changeGainLevel(10);
 ```
 
 
+##### `useAR(boolean)`
+***
+This method sets the `useAR` property of the Patient instance to the given value. <br>
+When activated it will show to the patient the location of the zone on his own body.
+
+```javascript
+doctor.useAR(true);
+```
+
+
+
+
+
 
 
 

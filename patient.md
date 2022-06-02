@@ -23,3 +23,23 @@ let patient = new SkopAPI.Patient(apiKey, token, sessionId);
 > **Note** : `SkopAPI` is the name of the library.
 
 After the instance is created, any Doctor instance with the same `SESSION_ID` will be able to communicate with the patient.
+
+
+## Methods
+
+##### `setupAugmentedReality(canvas)`
+***
+
+This method will setup the augmented reality on the given canvas. <br>
+The given canvas can be a canvas element or a canvas id. Afterwards you can call the augmented reality methods from a Doctor instance.
+
+
+```javascript
+//giving the canvas element
+setupAugmentedReality(canvas);
+
+//giving the canvas id
+setupAugmentedReality("myCanvas");
+```
+
+> **Note** : The augmented reality is currently under development.
