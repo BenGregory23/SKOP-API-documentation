@@ -1,89 +1,124 @@
 # Doctor
-
-The doctor can interact with the patient and modify the patient's audio.
-## Constructor
-
+The doctor can interact with the patient and modify the patient's audio.<br>
 To create an instance of the `Doctor` class, you must pass in the following parameters:
 
-| Parameter  | Description            |
-|------------|------------------------|
-| API_KEY    | Your Vonage API key.   |
-| API_SECRET | Your Vonage API secret |
-| SESSION_ID | A Vonage Session id    |
+`Doctor(API_KEY_WEMED, SESSION_ID)`
 
-`Doctor(API_KEY, API_SECRET, SESSION_ID)`
+| Parameter | Description                                    |
+|-----------|------------------------------------------------|
+| API_KEY   | Your WeMed API KEY.                            |
+| ROOM_ID   | A room id in which you want the patient to be. |
+
 
 > **Note** : To get the API_KEY, TOKEN & SESSION_ID, you need to create an account on [Vonage](https://www.vonage.com/)
 
 ```javascript  
-let doctor = new SkopAPI.Doctor(apiKey, token, sessionId);
+let doctor = await HalfredAPI.Doctor.init(apiKey, roomId);
 ```  
 
-> **Note** : `SkopAPI` is the name of the library.
+> **Note** : `await` is needed to wait for the API to be ready.
 
 
-After the instance is created, any Patient instance with the same `SESSION_ID` will be able to communicate with the doctor.
+After the instance is created, any Patient instance with the same `ROOM_ID` will be able to communicate with the doctor.
 
 ## Methods
 
-The Doctor class has methods that you can use to interact with the Skop API.
+| Name                                            | Description                                                           |
+|-------------------------------------------------|-----------------------------------------------------------------------|
+| [**disconnect()**](#disconnect)                 | Disconnects the doctor from the session.                              |
+| [**mute(boolean)**](#mute)                      | Mutes the doctor.                                                     |
+| [**useSkop()**](#useskop)                       | Filters the Patient's audio according to the current focus.           |
+| [**stopUsingSkop()**](#stopusingskop)           | Stops the audio filtering.                                            |
+| [**setCurrentFocus(string)**](#setcurrentfocus) | Sets the current focus to the given string.                           |
+| [**getCurrentFocus(string)**](#getcurrentfocus) | Gets the current focus.                                               |
+| [**setGain(value)**](#setgain)                  | Changes the gain level of the modified audio coming from the patient. |
+| [**useAR(boolean)**](#usear)                    | Shows to the patient the focus on his own body.                       |
 
 
-##### `skop(zone)` 
-***
+### Disconnect
 
-This method will modify the Patient's audio according to the given zone. <br>
-The zone can be one of the following :
-
-| Zone      | Category | Naming |
-|-----------|----------| -------|
-| Aortic    | Cardiac  | "Aortic" |
-| Mitral    | Cardiac  | "Mitral" |
-| Tricuspid | Cardiac  | "Tricuspid" |
-| ...       | ...      | ...    |
+Disconnect the doctor from the session.
 
 ```javascript
-//Here we are filtering the audio to listen to the Aortic zone
-doctor.skop("Aortic");
+doctor.disconnect();
 ```
 
-##### `skop()` 
-***
+### Mute
 
-The doctor can stop the audio filtering by calling this method , it will stop modifying the patient's audio.
-<br>The patient and the doctor will be able to talk to each other.
+Mute the doctor.
 
-```js
-//Stops the audio filtering
-doctor.skop();
+```javascript
+doctor.mute(boolean);
 ```
 
+### useSkop
+`useSkop` will filter the Patient's audio according to the given focus. <br>
 
+
+```javascript
+doctor.useSkop();
+```
+
+> **Note** : The focus to be used must be set before using [`setCurrentFocus`](#setcurrentfocus).
+
+
+
+### stopUsingSkop
+
+`stopUsingSkop` will stop the audio filtering.
+
+```javascript
+doctor.stopUsingSkop();
+```
 
 > **Note** : It is the same method used to listen to a zone but without any parameter.
 
-##### `setGain(gain)` 
-***
+### setCurrentFocus
 
-This method changes the gain level of the modified audio coming from the patient.
+`setCurrentFocus` will set the current focus to the given string.
+
+```javascript
+doctor.setCurrentFocus(string);
+```
+
+### getCurrentFocus
+
+`getCurrentFocus` will get the current focus.
+
+```javascript
+let variable = doctor.getCurrentFocus();
+```
+
+
+### setGain
+
+`setGain` changes the gain level of the modified audio coming from the patient.
 The value can be **positive** or **negative**. <br>
 If the value is positive, the audio will be amplified, if it is negative, the audio will be attenuated.
 
 ```javascript
 //Here we are changing the gain level of the audio to 10
 doctor.setGain(10);
-
 ```
 
 
-##### `useAR(boolean)`
-***
-This method sets the `useAR` property of the Patient instance to the given value. <br>
-When activated it will show to the patient the location of the zone on his own body.
+### useAR 
+
+`useAR` will use an AR algorithm to show to the patient the focus on his own body.
+
+ Parameter : 
+ - boolean : true to use the AR algorithm, false to stop using it.
 
 ```javascript
 doctor.useAR(true);
 ```
+
+
+
+
+
+
+
 
 
 
