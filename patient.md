@@ -1,45 +1,60 @@
 # Patient
-
-The patient is the user who has the Skop and will be using it. He does not have any methods as it is the doctor leading the call.
-## Patient constructor
-
+The patient is the user who has a Skop and will be using it.
 
 To create an instance of the `Patient` class, you must pass in the following parameters:
 
-| Parameter  | Description            |
-|------------|------------------------|
-| API_KEY    | Your Vonage API key.   |
-| API_SECRET | Your Vonage API secret |
-| SESSION_ID | A Vonage Session id    |
+`Patient(API_KEY, SESSION_ID)`
 
-`Patient(API_KEY, API_SECRET, SESSION_ID)`
 
-> **Note** : To get the API_KEY, TOKEN & SESSION_ID, you need to create an account on [Vonage](https://www.vonage.com/)
+| Parameter     | Description                                    |
+|---------------|------------------------------------------------|
+| API_KEY_WEMED | Your WeMed API KEY.                            |
+| ROOM_ID       | A room id in which you want the patient to be. |
+
+
+> **Note** : To get an API KEY, please visit [WeMed's website](https://en.wemed.fr)
 
 ```javascript  
-let patient = new SkopAPI.Patient(apiKey, token, sessionId);
+let patient = await HalfredAPI.Patient.init(apiKey, roomId);
 ```  
 
-> **Note** : `SkopAPI` is the name of the library.
+> **Note** : `await` is needed to wait for the API to be ready.
 
-After the instance is created, any Doctor instance with the same `SESSION_ID` will be able to communicate with the patient.
+After the instance is created, any Doctor instance with the same `ROOM_ID` will be able to communicate with the patient.
 
 
 ## Methods
 
-##### `setupAugmentedReality(canvas)`
-***
+| Name                            | Description                              |
+|---------------------------------|------------------------------------------|
+| [**disconnect()**](#disconnect) | Disconnects the doctor from the session. |
+| [**mute(boolean)**](#mute)      | Mutes the doctor.                        |
+| [**turnCamera()**](#turncamera) | Flips the camera of the patient.         |
 
-This method will setup the augmented reality on the given canvas. <br>
-The given canvas can be a canvas element or a canvas id. Afterwards you can call the augmented reality methods from a Doctor instance.
+### Disconnect 
 
-
-```javascript
-//giving the canvas element
-setupAugmentedReality(canvas);
-
-//giving the canvas id
-setupAugmentedReality("myCanvas");
+  Disconnect the patient from the session.
+  
+```js
+patient.disconnect();
 ```
 
-> **Note** : The augmented reality is currently under development.
+### Mute 
+
+Mute the patient. 
+    
+```js
+patient.mute(boolean);
+```
+
+
+### TurnCamera
+
+ Flips the camera of the patient. Calling it again will flip the camera back.
+
+```js
+patient.turnCamera();
+```
+
+
+
