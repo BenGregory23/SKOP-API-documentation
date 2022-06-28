@@ -23,21 +23,21 @@ After the instance is created, any Patient instance with the same `ROOM_ID` will
 
 ## Methods
 
-| Name                                            | Description                                                           |
-|-------------------------------------------------|-----------------------------------------------------------------------|
-| [**disconnect()**](#disconnect)                 | Disconnects the doctor from the session.                              |
-| [**mute(boolean)**](#mute)                      | Mutes the doctor.                                                     |
-| [**useSkop()**](#useskop)                       | Filters the Patient's audio according to the current focus.           |
-| [**stopUsingSkop()**](#stopusingskop)           | Stops the audio filtering.                                            |
-| [**setCurrentFocus(string)**](#setcurrentfocus) | Sets the current focus to the given string.                           |
-| [**getCurrentFocus(string)**](#getcurrentfocus) | Gets the current focus.                                               |
-| [**setGain(value)**](#setgain)                  | Changes the gain level of the modified audio coming from the patient. |
-| [**useAR(boolean)**](#usear)                    | Shows to the patient the focus on his own body.                       |
+| Name                                                              | Description                                                           |
+|-------------------------------------------------------------------|-----------------------------------------------------------------------|
+| [**disconnect()**](#disconnect)                                   | Disconnects the doctor from the session.                              |
+| [**mute(boolean)**](#mute)                                        | Mutes the doctor.                                                     |
+| [**useSkop()**](#useskop)                                         | Filters the Patient's audio according to the current focus.           |
+| [**stopUsingSkop()**](#stopusingskop)                             | Stops the audio filtering.                                            |
+| [**setCurrentFocus(string)**](#setcurrentfocus)                   | Sets the current focus to the given string.                           |
+| [**getCurrentFocus(string)**](#getcurrentfocus) &rarr; *string*   | Gets the current focus.                                               |
+| [**setGain(value)**](#setgain)                                    | Changes the gain level of the modified audio coming from the patient. |
+| [**useAR(boolean)**](#usear)                                      | Shows to the patient the focus on his own body.                       |
 
 
 ### Disconnect
 
-Disconnect the doctor from the session.
+Disconnects the doctor from the session.
 
 ```javascript
 doctor.disconnect();
@@ -45,37 +45,33 @@ doctor.disconnect();
 
 ### Mute
 
-Mute the doctor.
+Mutes the doctor.
 
 ```javascript
 doctor.mute(boolean);
 ```
 
 ### useSkop
-`useSkop` will filter the Patient's audio according to the given focus. <br>
-
+`useSkop` filters the Patient's audio according to the given focus. If a **new** focus is set while this method is called, the filter will be **automatically updated**.
 
 ```javascript
 doctor.useSkop();
 ```
 
-> **Note** : The focus to be used must be set before using [`setCurrentFocus`](#setcurrentfocus).
-
+> **Note** : The focus to be used must be set beforehand using [`setCurrentFocus`](#setcurrentfocus).
 
 
 ### stopUsingSkop
 
-`stopUsingSkop` will stop the audio filtering.
+`stopUsingSkop` stops the audio filtering and resets the Patient's audio to normal. The Doctor and the Patient can now communicate freely.
 
 ```javascript
 doctor.stopUsingSkop();
 ```
 
-> **Note** : It is the same method used to listen to a zone but without any parameter.
-
 ### setCurrentFocus
 
-`setCurrentFocus` will set the current focus to the given string.
+`setCurrentFocus` sets the current focus to the given string. The focus must be part of the [list of focuses available](focus.md)
 
 ```javascript
 doctor.setCurrentFocus(string);
@@ -83,12 +79,11 @@ doctor.setCurrentFocus(string);
 
 ### getCurrentFocus
 
-`getCurrentFocus` will get the current focus.
+`getCurrentFocus` returns the current focus as a string.
 
 ```javascript
 let variable = doctor.getCurrentFocus();
 ```
-
 
 ### setGain
 
@@ -96,11 +91,13 @@ let variable = doctor.getCurrentFocus();
 The value can be **positive** or **negative**. <br>
 If the value is positive, the audio will be amplified, if it is negative, the audio will be attenuated.
 
+Parameter: 
+- `value`: The value to be used. It must be a number.
+
 ```javascript
 //Here we are changing the gain level of the audio to 10
 doctor.setGain(10);
 ```
-
 
 ### useAR 
 
