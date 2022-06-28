@@ -8,8 +8,9 @@ To choose to listen to a certain focus, you must use call the [`setCurrentFocus`
 |                 **Name**                 | **Category** | **Position** |
 |:----------------------------------------:|:------------:|:------------:|
 |  <span style="color:red">Aortic</span>   |   Cardiac    |   Anterior   |
-|  <span style="color:red">Mitral</span>   |   Cardiac    |   Anterior   | 
-| <span style="color:red">Tricuspid</span> |   Cardiac    |  Anterior    |
+| <span style="color:red">Pulmonary</span> |   Cardiac    |   Anterior   |
+| <span style="color:red">Tricuspid</span> |   Cardiac    |   Anterior   |
+|  <span style="color:red">Mitral</span>   |   Cardiac    |   Anterior   |
 |  <span style="color:blue">ANT1L</span>   |  Pulmonary   |   Anterior   |
 |  <span style="color:blue">ANT1R</span>   |  Pulmonary   |   Anterior   |
 |  <span style="color:blue">ANT2L</span>   |  Pulmonary   |   Anterior   |
