@@ -9,34 +9,34 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: ' <h2> SKOP API </h2> ',
-      repo: 'https://github.com/BenGregory23/Halfred',
+<div id="app"></div>
+<script>
+  window.$docsify = {
+    name: ' <h2> SKOP API </h2> ',
+    repo: 'https://github.com/BenGregory23/Halfred',
 
-      //sidebar
-      loadSidebar: true,
-      subMaxLevel: 2,
+    //sidebar
+    loadSidebar: true,
+    subMaxLevel: 2,
 
-      // Search plugin options
-      search: 'auto', // default
-      search : [
-                 // => /README.md
-              "/",
-      ],
+    // Search plugin options
+    search: 'auto', // default
+    search : [
+      // => /README.md
+      "*",
+    ],
 
-      // complete configuration parameters
-      search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: [], // or 'auto'
-        placeholder: 'Type to search',
-        noResult: 'No result',
-      },
-    }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    // complete configuration parameters
+    search: {
+      maxAge: 86400000, // Expiration time, the default one day
+      paths: [], // or 'auto'
+      placeholder: 'Type to search',
+      noResult: 'No result',
+    },
+  }
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
