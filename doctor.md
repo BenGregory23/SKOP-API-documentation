@@ -13,7 +13,7 @@ To create an instance of the `Doctor` class, you must pass in the following para
 > **Note** : To get the API_KEY, TOKEN & SESSION_ID, you need to create an account on [Vonage](https://www.vonage.com/).
 
 ```javascript  
-let doctor = await HalfredAPI.Doctor.init(apiKey, roomId);
+let doctor = await SkopAPI.Doctor.init(apiKey, roomId);
 ```  
 
 > **Note** : `await` is needed to wait for the API to be ready.
