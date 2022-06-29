@@ -4,17 +4,18 @@
 ## Loading the library
 
 ### Script 
-You can start using Halfred API by simply adding our script directly to your html file.
+You can start using SKOP API by simply adding our script directly to your html file.
+
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/halfred-api/dist/HalfredAPI.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skop-api/dist/SkopAPI.js"></script>
 ```
 
 ### Install the package
 
 You can also install the package with npm.
 
-    $ npm install halfred-api
+    $ npm install skop-api
 
  > **Note** : The package is currently under development. It may not work as expected.
 
@@ -28,14 +29,14 @@ The `init` method takes two parameters: the API KEY and the ROOM ID.  The API KE
 Let's instantiate a `Doctor` in a html file.
 
 ```javascript
-let doctor = await HalfredAPI.Doctor.init(apiKey, 12);
+let doctor = await SkopAPI.Doctor.init(apiKey, 12);
 ```
 
 Now we can instantiate a `Patient` in another html file.
 
     
 ```javascript
-let patient = await HalfredAPI.Patient.init(apiKey, 12);
+let patient = await SkopAPI.Patient.init(apiKey, 12);
 ```
 
 The Doctor and the Patient, having the same ROOM ID, will be able to communicate with each other. You can now interact with the Doctor and the Patient by calling their methods.
