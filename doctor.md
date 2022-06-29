@@ -10,7 +10,7 @@ To create an instance of the `Doctor` class, you must pass in the following para
 | ROOM_ID   | A room id in which you want the patient to be. |
 
 
-> **Note** : To get the API_KEY, TOKEN & SESSION_ID, you need to create an account on [Vonage](https://www.vonage.com/)
+> **Note** : To get the API_KEY, TOKEN & SESSION_ID, you need to create an account on [Vonage](https://www.vonage.com/).
 
 ```javascript  
 let doctor = await HalfredAPI.Doctor.init(apiKey, roomId);
@@ -71,7 +71,7 @@ doctor.stopUsingSkop();
 
 ### setCurrentFocus
 
-`setCurrentFocus` sets the current focus to the given string. The focus must be part of the [list of focuses available](focus.md)
+`setCurrentFocus` sets the current focus to the given string. The focus must be part of the [list of focuses available].(focus.md)
 
 ```javascript
 doctor.setCurrentFocus(string);
@@ -101,7 +101,7 @@ doctor.setGain(10);
 
 ### useAR 
 
-`useAR` will use an AR algorithm to show to the patient the focus on his own body.
+`useAR` uses an augmented reality algorithm to show to the patient the focus on his own body. When toggled on for the first time there is a short delay before the augmented reality algorithm starts. Afterwards toggling on/off will be relatively fast.
 
  Parameter : 
  - boolean : true to use the AR algorithm, false to stop using it.
