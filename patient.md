@@ -14,7 +14,7 @@ To create an instance of the `Patient` class, you must pass in the following par
 > **Note** : To get an API KEY, please go [here](https://www.wemed.fr/inscription-api-skop)
 
 ```javascript  
-let patient = await HalfredAPI.Patient.init(apiKey, roomId);
+let patient = await SkopAPI.Patient.init(apiKey, roomId);
 ```  
 
 > **Note** : `await` is needed to wait for the API to be ready.
