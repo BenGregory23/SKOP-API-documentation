@@ -47,8 +47,11 @@ doctor.disconnect();
 
 Mutes the doctor.
 
+Parameter:
+- `state`: `true` to mute the doctor, `false` to unmute the doctor.
+
 ```javascript
-doctor.mute(boolean);
+doctor.mute(state);
 ```
 
 ### useSkop

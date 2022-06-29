@@ -40,9 +40,12 @@ patient.disconnect();
 ### Mute 
 
 Mute the patient. 
-    
+
+Parameter:
+- `state`: `true` to mute the patient, `false` to unmute the patient.
+  
 ```js
-patient.mute(boolean);
+patient.mute(state);
 ```
 
 
