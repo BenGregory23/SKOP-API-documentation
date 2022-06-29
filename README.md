@@ -13,7 +13,7 @@ One of the key features of the API is the possibility to use **augmented reality
 
 [Demo](https://halfred.wemed.fr/demo_prod ':include :type=iframe width=100% height=700px allow="microphone; camera"')
 
->  **If you want to test the demo in full page go [here](https://halfred.wemed.fr/)**
+>  **If you want to test the demo in full page go [here](https://halfred.wemed.fr/demo_prod)**
 
 
 
