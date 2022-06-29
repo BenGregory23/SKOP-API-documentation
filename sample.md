@@ -2,6 +2,11 @@
 
 If you want to use the API, here are some examples of how to use it. Each example is a snippet of code either for the patient or the doctor.
 
+### Create a new instance of the Patient class - *Patient*
+
+```js
+let patient = await HalfredAPI.Patient.init(apiKey, roomId);
+```
 
 ### Setting the current focus - *Doctor*
 
@@ -61,7 +66,7 @@ stop.addEventListener("click", function(){
 
 ### Using augmented reality - *Doctor*
 
-Let's say that you want to be able to toggle on/off the augmented reality. You would need to have a toggle button, then in javascript you can listen to the state of the button and call `useAR(boolean)` on the doctor instance.
+When using augmented reality it can be useful to be able to toggle it on/off. To do so a possibility is to have a toggle button, then in javascript you can listen to the state of the button and call `useAR(boolean)` on thedoctor instance.
 
 ```html
 <button id="AR">Toggle AR</button>
