@@ -1,6 +1,5 @@
 # Patient
-The patient is the user who has a Skop and will be using it.
-
+The patient is the user who has a Skop and will be using it.<br>
 To create an instance of the `Patient` class, you must pass in the following parameters:
 
 `Patient(API_KEY, SESSION_ID)`
@@ -49,7 +48,7 @@ patient.mute(boolean);
 
 ### TurnCamera
 
- Flips the camera of the patient. Calling it again will flip the camera back.
+ Flips the camera of the patient. Calling it again will flip the camera back. The default mode for the camera is **front**.
 
 ```js
 patient.turnCamera();
