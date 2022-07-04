@@ -48,10 +48,9 @@ Parameter:
 patient.mute(state);
 ```
 
-
 ### TurnCamera
 
- Flips the camera of the patient. Calling it again will flip the camera back. The default mode for the camera is **front**.
+Flips the camera of the patient. Calling it again will flip the camera back. The default mode for the camera is **front**.
 
 ```js
 patient.turnCamera();
