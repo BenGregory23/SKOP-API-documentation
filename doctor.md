@@ -23,16 +23,17 @@ After the instance is created, any Patient instance with the same `ROOM_ID` will
 
 ## Methods
 
-| Name                                                              | Description                                                           |
-|-------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**disconnect()**](#disconnect)                                   | Disconnects the doctor from the session.                              |
-| [**mute(boolean)**](#mute)                                        | Mutes the doctor.                                                     |
-| [**useSkop()**](#useskop)                                         | Filters the Patient's audio according to the current focus.           |
-| [**stopUsingSkop()**](#stopusingskop)                             | Stops the audio filtering.                                            |
-| [**setCurrentFocus(string)**](#setcurrentfocus)                   | Sets the current focus to the given string.                           |
-| [**getCurrentFocus(string)**](#getcurrentfocus) &rarr; *string*   | Gets the current focus.                                               |
-| [**setGain(value)**](#setgain)                                    | Changes the gain level of the modified audio coming from the patient. |
-| [**useAR(boolean)**](#usear)                                      | Shows to the patient the focus on his own body.                       |
+| Name                                                            | Description                                                           |
+|-----------------------------------------------------------------|-----------------------------------------------------------------------|
+| [**disconnect()**](#disconnect)                                 | Disconnects the doctor from the session.                              |
+| [**mute(boolean)**](#mute)                                      | Mutes the doctor.                                                     |
+| [**useSkop()**](#useskop)                                       | Filters the Patient's audio according to the current focus.           |
+| [**stopUsingSkop()**](#stopusingskop)                           | Stops the audio filtering.                                            |
+| [**setCurrentFocus(string)**](#setcurrentfocus)                 | Sets the current focus to the given string.                           |
+| [**getCurrentFocus(string)**](#getcurrentfocus) &rarr; *string* | Gets the current focus.                                               |
+| [**setGain(value)**](#setgain)                                  | Changes the gain level of the modified audio coming from the patient. |
+| [**useAR(boolean)**](#usear)                                    | Shows to the patient the focus on his own body.                       |
+| [**useMonoyer(boolean)**](#usemonoyer)                          | Activates/Deactivates the the monoyer eyesight test.                  |
 
 
 ### Disconnect
@@ -116,6 +117,16 @@ doctor.useAR(true);
 
 
 
+### useMonoyer
+
+`useMonoyer` activates/deactivates the the monoyer eyesight test.
+
+Parameter : 
+- boolean : true to activate the monoyer eyesight test, false to deactivate it.
+    
+```javascript
+doctor.useMonoyer(true);
+```
 
 
 
