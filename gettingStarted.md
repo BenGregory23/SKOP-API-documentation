@@ -4,7 +4,7 @@
 ## Loading the library
 
 ### Script 
-You can start using SKOP API by simply adding our script directly to your html file.
+You can start using the SKOP API by simply adding our script directly to your html file.
 
 
 ```html
