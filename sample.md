@@ -27,9 +27,9 @@ Then using javascript you can set the focus each time the user selects a new opt
 ```javascript
 let focus = document.getElementById("select");
 
-focus.addEventListener("change", function(){
+focus.addEventListener("change", function(e){
     // on change of focus, set the focus
-    doctor.setCurrentFocus(value);
+    doctor.setCurrentFocus(e.target.value);
 });
 ```
 
@@ -69,7 +69,7 @@ stop.addEventListener("click", function(){
 When using augmented reality it can be useful to be able to toggle it on/off. To do so a possibility is to have a toggle button, then in javascript you can listen to the state of the button and call `useAR(boolean)` on thedoctor instance.
 
 ```html
-<button id="AR">Toggle AR</button>
+<input type="checkbox" id="AR">Toggle AR</input>
 ```
 
 ```js
