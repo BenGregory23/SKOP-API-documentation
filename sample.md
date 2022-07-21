@@ -2,9 +2,13 @@
 
 If you want to use the API, here are some examples of how to use it. Each example is a snippet of code either for the patient or the doctor.
 
-### Create a new instance of the Patient class - *Patient*
+### Create a new instance of the Doctor or Patient class
 
+The syntax is the same for both classes.
+    
 ```js
+let doctor = await SkopAPI.Doctor.init(apiKey, roomId);
+or 
 let patient = await HalfredAPI.Patient.init(apiKey, roomId);
 ```
 
