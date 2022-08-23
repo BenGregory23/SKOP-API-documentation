@@ -8,7 +8,7 @@ One of the key features of the API is the possibility of using **augmented reali
 
 **Important** : To use the API, you need to have registered API_KEY. If you don't have one, please go [here](https://www.wemed.fr/inscription-api-skop) to get one.
 
->  **If you want to test the demo in full page go [here](https://halfred.wemed.fr/demo)**
+>  **Note** : If you want to test the demo in full page go [here](https://halfred.wemed.fr/demo)
 
 
 [Demo](https://halfred.wemed.fr/demo/ ':include :type=iframe width=100%  height=750px allow="microphone; camera" style=""' )
