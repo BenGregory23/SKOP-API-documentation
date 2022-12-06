@@ -23,11 +23,13 @@ After the instance is created, any Doctor instance with the same `ROOM_ID` will 
 
 ## Methods
 
-| Name                            | Description                              |
-|---------------------------------|------------------------------------------|
-| [**disconnect()**](#disconnect) | Disconnects the doctor from the session. |
-| [**mute(boolean)**](#mute)      | Mutes the doctor.                        |
-| [**turnCamera()**](#turncamera) | Flips the camera of the patient.         |
+| Name                                                  | Description                              |
+|-------------------------------------------------------|------------------------------------------|
+| [**disconnect()**](#disconnect)                       | Disconnects the doctor from the session. |
+| [**mute(boolean)**](#mute)                            | Mutes the doctor.                        |
+| [**turnCamera()**](#turncamera)                       | Flips the camera of the patient.         |
+| [**getMediaDevices()**](#getMediaDevices)             | Returns all the available media devices. |
+| [**setInputDevice(string)**](#setInputDevice(string)) | Sets the current microphone of the user. |
 
 ### Disconnect 
 
@@ -55,6 +57,28 @@ Flips the camera of the patient. Calling it again will flip the camera back. The
 ```js
 patient.turnCamera();
 ```
+
+### getMediaDevices
+
+Returns all the available media devices. 
+
+> **Note** : To see the labels of the devices this method has to be called after the user has given permission to use a microphone. This method is asynchronous and returns a `Promise`. 
+
+```js
+patient.getMediaDevices();
+```
+
+### setInputDevice(string)
+
+Sets the current microphone of the user.
+
+Parameter:
+- `deviceId`: The id of the microphone to use as a string.
+
+```js
+patient.setInputDevice(deviceId);
+```
+
 
 
 

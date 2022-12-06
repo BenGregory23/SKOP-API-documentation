@@ -34,6 +34,8 @@ After the instance is created, any Patient instance with the same `ROOM_ID` will
 | [**setGain(value)**](#setgain)                                  | Changes the gain level of the modified audio coming from the patient. |
 | [**useAR(boolean)**](#usear)                                    | Shows to the patient the focus on his own body.                       |
 | [**useMonoyer(boolean)**](#usemonoyer)                          | Activates/Deactivates the the monoyer eyesight test.                  |
+| [**getMediaDevices()**](#getMediaDevices)             | Returns all the available media devices. |
+| [**setInputDevice(string)**](#setInputDevice(string)) | Sets the current microphone of the user. |
 
 
 ### Disconnect
@@ -128,6 +130,27 @@ Parameter :
 doctor.useMonoyer(true);
 ```
 
+
+### getMediaDevices
+
+Returns all the available media devices.
+
+> **Note** : To see the labels of the devices this method has to be called after the user has given permission to use a microphone. This method is asynchronous and returns a `Promise`.
+
+```js
+doctor.getMediaDevices();
+```
+
+### setInputDevice(string)
+
+Sets the current microphone of the user.
+
+Parameter:
+- `deviceId`: The id of the microphone to use as a string.
+
+```js
+doctor.setInputDevice(deviceId);
+```
 
 
 
